@@ -11,7 +11,7 @@ const ai = new GoogleGenAI({ apiKey: API_KEY! });
 
 export const generateCaption = async (base64Data: string, mimeType: string): Promise<string> => {
     if (!API_KEY) {
-        return "A wonderful graduation memory.";
+        return "Một khoảnh khắc tốt nghiệp thật đẹp.";
     }
 
     try {
@@ -22,7 +22,7 @@ export const generateCaption = async (base64Data: string, mimeType: string): Pro
             },
         };
         const textPart = {
-            text: "Generate a short, heartwarming caption for this graduation photo. Be creative and optimistic. Keep it under 20 words.",
+            text: "Hãy viết một chú thích ngắn, ấm áp cho bức ảnh tốt nghiệp này. Hãy sáng tạo và lạc quan. Giữ trong dưới 20 từ. Viết bằng tiếng Việt.",
         };
 
         const response = await ai.models.generateContent({
@@ -30,12 +30,12 @@ export const generateCaption = async (base64Data: string, mimeType: string): Pro
             contents: { parts: [imagePart, textPart] },
         });
 
-        const caption = response.text.trim();
-        return caption || "A new chapter begins!";
+    const caption = response.text.trim();
+    return caption || "Chương mới vừa bắt đầu!";
 
     } catch (error) {
         console.error("Error generating caption with Gemini:", error);
         // Fallback caption in case of API error
-        return "Celebrating a great achievement!";
+        return "Chúc mừng một thành tựu tuyệt vời!";
     }
 };

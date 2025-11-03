@@ -6,6 +6,7 @@ import { Image } from '../types';
 interface ImageGridProps {
     images: Image[];
     onImageClick: (image: Image) => void;
+    onImageDelete?: (id: string) => void;
 }
 
 const distributeImages = (images: Image[], numColumns: number): Image[][] => {
@@ -16,7 +17,7 @@ const distributeImages = (images: Image[], numColumns: number): Image[][] => {
     return columns;
 };
 
-export const ImageGrid: React.FC<ImageGridProps> = ({ images, onImageClick }) => {
+export const ImageGrid: React.FC<ImageGridProps> = ({ images, onImageClick, onImageDelete }) => {
     // This is a simplified approach for masonry-like layout with Tailwind.
     // We split images into columns.
     const columns = [
@@ -35,6 +36,7 @@ export const ImageGrid: React.FC<ImageGridProps> = ({ images, onImageClick }) =>
                             key={image.id}
                             image={image}
                             onImageClick={onImageClick}
+                            onDelete={onImageDelete}
                         />
                     ))}
                 </div>
