@@ -1,0 +1,5 @@
+{
+  "name": "Graduation Photo Gallery",
+  "description": "A beautiful, responsive photo gallery to celebrate graduation moments. Upload your own photos and let Gemini AI generate a heartwarming caption for each memory.",
+  "requestFramePermissions": []
+}
