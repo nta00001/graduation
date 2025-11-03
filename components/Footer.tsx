@@ -11,7 +11,7 @@ export const Footer: React.FC = React.memo(() => {
         <footer className="w-full bg-background-light dark:bg-background-dark border-t border-border-light dark:border-border-dark mt-auto">
             <div className="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                 <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
-                    <p className="text-sm text-subtle-light dark:text-subtle-dark text-center sm:text-left">© 2024 Chúc mừng tốt nghiệp. All rights reserved.</p>
+                    <p className="text-sm text-subtle-light dark:text-subtle-dark text-center sm:text-left">© 2025 Chúc mừng tốt nghiệp. Trần Thu Hương.</p>
                     <div className="group relative">
                         <button className="flex items-center gap-2 rounded-lg bg-primary/10 px-4 py-2 text-sm font-semibold text-primary transition-colors hover:bg-primary/20">
                             <span className="material-symbols-outlined text-xl">share</span>
